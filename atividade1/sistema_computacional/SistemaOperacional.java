@@ -1,4 +1,4 @@
-package sistema_computacional;
+package atividade1.sistema_computacional;
 
 public class SistemaOperacional {
     private Double TempoDeExecucao;
@@ -13,15 +13,15 @@ public class SistemaOperacional {
     public Boolean executarPrograma(Computador computador, Programa programa) {
         setTempoDeExecucao(computador, programa);
         if (computador.getMemoriaRAM() < programa.getMemoriaRAMAlocada()) {
-                    System.out.println("Erro na execução do programa.");
+                    System.out.println("Erro na execução do programa " +programa.getNome()+ ".");
                     System.out.println("Tempo de execução: " +TempoDeExecucao);
                     return false;
         } else {
             if (computador.getSSD() < programa.getSSDOcupado()) {
-                System.out.println("Programa executado com sucesso, erro na instalação do programa.");
+                System.out.println("Programa " +programa.getNome()+ " executado com sucesso, erro na instalação do programa.");
                 System.out.println("Tempo de execução: " +TempoDeExecucao);
             } else {
-                    System.out.println("Programa executado com sucesso.");
+                    System.out.println("Programa " +programa.getNome()+ " executado com sucesso.");
                     System.out.println("Tempo de execução: " +TempoDeExecucao);
             }
             return true;

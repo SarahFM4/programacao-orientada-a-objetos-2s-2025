@@ -1,4 +1,4 @@
-package sistema_computacional;
+package atividade1.sistema_computacional;
 
 public class Computador {
     private Integer memoriaRAM;
