@@ -23,5 +23,10 @@ public class ExemploArrayList {
         if (!nomes.contains("Carol")) {
             System.out.println("Carol não está na lista.");
         }
+
+        nomes.clear();
+        if (nomes.isEmpty()) {
+            System.out.println("A lista está vazia.");
+        }
     }
 }
